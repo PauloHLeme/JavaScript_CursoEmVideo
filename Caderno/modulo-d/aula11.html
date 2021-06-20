@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo C - Aula 11</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <section>
+        <h1>Condições</h1>
+        <h2>Sequências</h2>
+        <p>Todos os códigos que fizemos até hoje nas aulas foram sequenciais, ou seja, seguiam uma sequência lógica de
+            acontecimentos, não podendo serem executados em fora de ordem e nem com etapas puladas.</p>
+        <p>Mas existem casos onde nós vamos querer executar um comando intermediário apenas <strong>se</strong> alguma
+            <strong>condição</strong> for atendida.</p>
+        <p>Dessa forma, o código se bifurca em duas ou mais condições diferentes. Isso se chama <strong>Desvio
+                Condicional</strong></p>
+        <h2>Condições em JavaScript</h2>
+        <p>Para criarmos uma condição, vamos criar um bloco com o código <code>if()</code></p>
+        <h3 class="exemplo">Estrutura</h3>
+        <pre class="codigo">
+<code>
+    if (condição){
+        true
+    }else{
+        false
+    }
+</code>
+                </pre>
+        <h3>Condição Simples</h3>
+        <p>Condições simples contém apenas a instrução para a saída <code>true</code>, caso contrário, o código segue o
+            fluxo natural.</p>
+        <h3 class="exemplo">Exemplo</h3>
+        <pre class="codigo">
+<code>
+    var vel
+    vel = 60.5
+    console.log(`A velocidade do seu carro é ${vel}Km/h`)
+    if (vel >60){
+        console.log('Você ultrapassou a velocidade permitida.
+        Receba essa multa de presente')
+    }
+    console.log('Dirija sempre usando cinto de segurança')
+</code>
+                    </pre>
+        <p>No exemplo acima, a mensagem <em>"você ultrapassou a velocidade permitida. Receba essa multa de
+                presente."</em> só será exibida se a condição <code>vel >60</code> for atendida. Caso contrário, o
+            programa pula o comando dentro do bloco da condição e segue funcionando normalmente a partir da próxima
+            linha</p>
+        <h3>Condição Composta</h3>
+        <p>Quando a condição tem uma execução para <code>true</code> e outra para <code>false</code>.</p>
+        <h3 class="exemplo">Exemplo</h3>
+        <pre class="codigo">
+<code>
+    var país
+    país = 'EUA'
+    console.log(`Naturalidade: ${país}`)
+    if (país.toLowerCase() == 'brasil') {
+        console.log('Você é Brasileiro!')
+    } else {
+        console.log('Você é Estrangeiro')
+    }
+</code>
+                    </pre>
+        <p>Nesse caso, temos a condição <code>if</code> e <code>else</code>. Se a condição for atendida, significa que o
+            que está no primeiro bloco de código será executado, e o que estiver no segundo será ignorado. Caso o
+            resultado da condição seja falso, o contrário acontece, sendo ignorado o primeiro bloco que está sob a
+            condição <code>if</code> e executando o segundo bloco, que pertence ao <code>else</code>.</p>
+        <h3 class="exemplo">Dica</h3>
+        <p>Quando for coletar o que foi escrito em uma caixa <code>input</code> para colocar em uma variável, NUNCA
+            ESQUEÇA de adicionar <code>.value</code> ao final, para declarar que você está selecionando o valor daquela
+            entrada, independente se é tipo <code>Number</code> ou <code>String</code></p>
+        <h3 class="exemplo">Exemplo</h3>
+        <pre class="codigo">
+<code>
+    country = document.querySelector('input#pais').value
+</code>
+                    </pre>
+
+    </section>
+</body>
+
+</html>

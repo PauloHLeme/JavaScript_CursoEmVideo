@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo D - Aula 13</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <section>
+        <h1>Repetições (Parte 1)</h1>
+            <h2>Repetições com teste lógico no início</h2>
+                <p>Várias tarefas do dia a dia requerem repetições. Executar uma tarefa um número n de vezes.</p>
+                <p>Ao escrevermos um código, isso também acontece bastante. As vezes precisamos fazer a repetição de uma função várias vezes, e para isso temos justamente as <strong>Repetições</strong>.</p>
+                <p>Acontece que nem sempre a repetição é linear. Várias vezes temos condições no caminho, que então farão a repetição acontecer ou não. Assim, a repetição tem condições lógicas para acontecer ou não, em um loop que continua enquanto a condição for atendida!</p>
+                <h3 class="exemplo">Estrutura de código</h3>
+                <pre class="codigo">
+<code>
+    while(condição){
+
+    }
+</code>
+                </pre>
+                <h3 class="exemplo">Exemplo</h3>
+                <pre class="codigo">
+<code>
+    var c = 1
+    while (c <= 50){
+        console.log(`Passo ${c}`)
+        c++
+    }
+</code>
+                </pre>
+                <p>Esse código vai numerar cada vez que ele escrever, até completar as 50 vezes pedidas pela condição de repetição. Caso tívessemos que fazer isso manualmente, teríamos condição, mas seria um trabalho totalmente desnecessário!</p>
+            <h2>Repetições com teste lógico no final</h2>
+                <p>O funcionamento é similar a repetição com teste inicial, mas ele joga o teste para o final do processo, executanto a tarefa primeiro, e testando a condição no final.</p>
+                <h3 class="exemplo">Estrutura de código</h3>
+                    <pre class="codigo">
+<code>
+    do{
+
+    }while(condição)
+</code>
+                    </pre>
+                <h3 class="exemplo">Exemplo</h3>
+                    <pre class="codigo">
+<code>
+    var c = 1
+    do{
+        console.log(`Passo ${c}`)
+        c++ //c recebe c+1
+    }while (c <= 6)
+</code>
+                    </pre>
+                    <p>Os resultados são muito semelhantes na maioria dos casos, mas podemos encontrar algumas situações onde a existência do teste antes ou depois pode ser bem relevante. No dia a dia, certamente você vai encontrar uma situação onde isso faz a diferença!</p>
+</section>
+</body>
+</html>

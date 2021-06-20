@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo B - Aula 01</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body><section>
+    
+        <h1>Variáveis e Tipos Primitivos</h1>
+        <p>Anteriormente, aprendemos os comandos <code>window.alert()</code>, <code>window.confirm()</code> e <code>window.prompt()</code>, mas não éramos capazes de armazenar os dados de entrada nas caixas de confirmação e de prompt.</p>
+        <p>Nessa aula, vamos utilizar as VARIÁVEIS parra armazenar os dados e utilizá-los!</p>
+        <h2>Comentários</h2>
+        <p>Os comentários servem para, como o próprio nome sugere, comentarmos o texto dentro do nosso código.</p>
+        <p>Em JavaScript, utilizamos os sinais de <code>// ou /* e */</code>. O primeiro serve para comentarmos em uma única linha, e o segundo para várias linhas de explicação</p>
+        <h3 class="exemplo">Exemplo</h3>
+        <pre class="codigo">
+            <code>
+    window.alert('Minha primeira mensagem!') //exibe um alerta
+
+    /*Abaixo, o confirm gera uma caixa de confirmação.
+    Já o segundo, uma caixa para entrada de dados!*/
+
+    window.confirm('Está gostando de JavaScript?')
+    window.prompt('Qual é o seu nome?')
+            </code>
+        </pre>
+        <h2>Variáveis</h2>
+        <p>As <strong>Variáveis</strong> são "espaços" onde alocamos informações, dados. Cada variável consegue alocar apenas um valor por vez. Para receber um novo valor, ele deve eliminar antes o dado anterior.</p>
+        <p>Para criar uma variavel, utilizamos o código <code>var</code>, damos um nome a ela e então atribuir um valor a eles!</p>
+        <p>As variáveis também possuem tamanhos diferentes, para receber informações diferentes. Como por exemplo um tipo de <code>var</code> para Números, um para palavras, etc...</p>
+        <h3>Identificadores</h3>
+        <p>Identificadores são os nomes dados para uma variável, e eles seguem algumas regras específicas:</p>
+        <ul>
+            <li>Podem começar com letra, $, ou _</li>
+            <li>NÃO podem começar com Números</li>
+            <li>É possível utilizar letras ou Números</li>
+            <li>É possível usar acentos e símbolos</li>
+            <li>NÃO podem conter espaços (deve ser substituido por _)</li>
+            <li>NÃO podem ser palavras reservadas (palavras já utilizadas pela linguagem, como por exemplo o próprio <code>var</code>.</li>
+        </ul>
+        <h3 class="exemplo">Exemplo</h3>
+        <pre class="codigo">
+    <code>
+    var veiculo1 = 'carro'
+    </code>
+    Neste caso,
+
+    <code>var</code> é a chamada para criar a variável
+    <code>veiculo1</code> é o Identificador, ou seja, o nome da variável, e
+    <code>carro</code> é o valor dentro da variável, o dado que ela armazena
+
+    Sendo assim, temos que:
+
+<code>
+    var veiculo1 = 'carro'
+</code>
+    é equivalente a dizer que a Variável <code>var</code> de Identificador <code>veiculo1</code>
+    recebe o valor <code>'carro'</code>!
+        </pre>
+        <h3>Dicas</h3>
+        <ul>
+            <li>Maiúsculas e Minúsculas são diferenciáveis</li>
+            <li>Utilize nomes Coerentes para a variável, de acordo com o valor que utiliza, e não apenas n1, n2, n3, n4. Isso vai deixar o código confuso!</li>
+        </ul>
+        <h2>Tipos Primitivos</h2>
+        <p>As variáveis podem receber inúmeros tipos de dados. Podemos guardar números, valores, nomes, sentenças, informações verdadeiras ou falsas, etc.</p>
+        <p>Para identificar ao programa como tratar determinado tipo de dado com mais facilidade, existem justamente os "Tipos de Dados". Os principais tipos, são chamados de Tipos Primitivos.</p>
+        <p>São eles, a princípio:</p>
+        <ul>
+            <li>Number</li>
+            <p>São os dados representando valores. O JavaScript não diferencia o tipo de número, e trata todos eles sob esse mesmo tipo primitivo.</p>
+            <p>Exemplos: 5; 10; -10; 3.5</p>
+            <p>Mas ainda podem ser subdivididos em:</p>
+            <ul>
+                <li>Infinity</li>
+                <li>NaN (Not a Number)</li>
+            </ul>
+            <li>String</li>
+            <p>São palavras, sentenças, textos. Valores não numéricos e não binários, como por exemplo:</p>
+            <p>"Curso em Vídeo"; 'Paulo'; `Avenida 10, número 199, Anhembi, São Paulo - SP`.</p>
+            <p>Note que ao escrevermos o nome de uma variável do tipo <code>string</code>, temos que colocar ele dentro de "", '', ou ``. O uso específico de cada uma dessas formas de se escrever será tratado em uma aula futura. </p>
+            <li>Boolean</li>
+            <p>Valores binários interpretados como <code>True</code> ou <code>False</code>, ou seja, Verdadeiro ou Falso.</p>
+            <li>Null</li>
+            <li>Undefined</li>
+            <li>Object</li>
+                <ul">
+                    <li>Array</li>
+                </ul>
+            <li>Function</li>
+        </ul>
+</section>
+</body>
+</html>

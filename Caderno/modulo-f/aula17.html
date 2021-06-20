@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo F - Aula 16</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <section>
+        <h1>Funções</h1>
+            <h2>O que são Funções?</h2>
+            <p>No nosso dia a dia, temos diversas rotinas, tarefas que precisamos fazer. Algumas diariamente, outras ocasionalmente, mas todas tem uma certa rotina. Um conjunto de tarefas, atividades que precisamos fazer para executar essa função.</p>
+            <p>Algumas tarefas do dia a dia são automáticas, fazemos sem que alguém nos peça, fazem parte do nosso sistema diário. Outras acontecem porque alguém pediu. Sua mãe, seu marido, etc.</p>
+            <p>Pois bem, as Funções em JavaScript são exatamente a mesma coisa! Definindo bem, temos que:</p>
+            <ul>
+                <li>São <strong>ações</strong> executadas assim que são <strong>chamadas</strong> ou em decorrência de algum <strong>evento</strong>.</li>
+                <li>Uma <strong>função</strong> pode recebver <strong>parâmetros</strong> e retornar um <strong>resultado</strong>.</li>
+            </ul>
+                <h3 class="exemplo">Exemplo</h3>
+            <pre class="codigo">
+<code>
+    function parimp (n){        //n é o parâmetro
+        if (n%2 == 0){          //essa linha é a ação que a
+            return 'par'          função executa
+        }else{
+            return 'ímpar'      //ímpar é o retorno dado
+        }
+    }
+    let res = parimp(11)        //parimp é a chamada que faz
+                                  a função ser executada
+</code>
+            </pre>
+                <h3>Parâmetros Opcionais</h3>
+                <p>Se definirmos um parâmetro formal dentro da função, mas não passarmos um valor para tal na chamada, aquele parâmetro vai receber como valor <code>undefined</code>. Para que isso não aconteça, podemos fazer uso dos Parâmetros Opcionais.</p>
+                <p>Ao definirmos o parâmetro formal e nomeá-lo, podemos definir um valor base para ele. Dessa forma, se nenhum valor for dado durante a chamada, ele terá o seu padrão pré-estabelecido.</p>
+                <h3 class="exemplo">Exemplo</h3>
+                <pre class="codigo">
+<code>
+    function soma(n1=0,n2=0) {
+        return n1 + n2
+    }
+    console.log(soma(7))
+</code>
+                </pre>
+                <p>Perceba que, diferente do exemplo anterior, nesse os parâmetros da function receberam um valor <code>n1<ins>=0</ins></code> e <code>n2<ins>=0</ins></code>. Ao informarmos apenas o valor <code>7</code> na chamada, o n2 automaticamente assumiu o padrão 0, possibilitando o cálculo.</p>
+                <h3>Recursos Extras</h3>
+                <p>Funções possuem uma caixa de ferramenta muito grande! Isso que aprendemos nesse curso básico, é só o começo!</p>
+                <p>Para citar dois exemplos básicos:</p>
+                <ul>
+                    <li>Funções podem ser criadas dentro de variáveis</li>
+                    <li>Funções podem ser chamadas dentro delas mesmas para se executarem</li>
+                </ul>
+                <p>A dica aqui é, as funções servem para diversas funções! E vão fazer parte de muitas de suas funções como programador! Então é sua função aprender mais funções que as funções fazem! Ou coisa assim.</p>
+    </section>
+</body>
+
+</html>

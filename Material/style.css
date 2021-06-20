@@ -1,0 +1,11 @@
+p{
+    text-align: justify;
+}
+ul {
+    list-style-type: none;
+}
+ul li:before{
+    content: '\25C6';
+    padding-right: 15px;
+    
+}

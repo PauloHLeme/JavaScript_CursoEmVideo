@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+        }
+        body{
+            font: normal 18pt arial;
+        }
+        #button{
+            background-color: lightblue;
+            border: none;
+            width: 100px;
+            height: 40px;
+            margin-left: 20px;
+            border-radius: 5px;
+        }
+        input{
+            background-color: lightgray;
+            border: none;
+            width: 100px;
+            height: 40px;
+            border-radius: 5px;
+            text-align: center;
+            font: normal 18pt arial;
+        }
+        #result{
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="txtn1" id='txtn1'> +
+    <input type="number" name="txtn2" id='txtn2'>
+    <input type="button" value="Somar" id='button'>
+    <div id='result'></div>
+    <script>
+        document.querySelector('#button').addEventListener('click', soma)
+        function soma() {
+            var tn1 =Number(window.document.querySelector('#txtn1').value)
+            var tn2 = Number(window.document.querySelector('#txtn2').value)
+            var sum = tn1 + tn2
+            document.querySelector('#result').innerHTML = `A soma de ${tn1} e ${tn2} é igual a <strong><ins>${sum}</ins></strong>`
+        }
+    </script>
+</body>
+</html>

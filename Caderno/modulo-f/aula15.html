@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo F - Aula 15</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <section>
+        <h1>Variáveis Compostas</h1>
+            <h2>Variável simples vs composta</h2>
+            <p>Variáveis simples só guardam um valor por vez. Cada vez que colocamos um valor, ela exclui o valor anterior.</p>
+            <p>Já as variáveis compostas, também conhecidas como <code>arrays</code>, são capazes de armazenar diversos valores em uma única variável, tornando nosso código ainda mais enxuto!</p>
+            <p>Dentro das variáveis compostas, teremos também classificações internas, para podermos identificar cada um dos valores armazenados nelas, e cada uma das variáveis receberá um <strong>índice</strong> identificador, numerado a partir de 0.</p>
+            <h2>Estrutura</h2>
+            <p>A variável composta é composta por:</p>
+            <ul>
+                <li><code>Array</code>: Ou em português, Vetor. A própria variável</li>
+                <li><code>Elemento</code>: Onde ficam alocados o espaço da memória, o valor inserido nela e o índice identificador</li>
+                <li><code>Índice</code>: o Índice, ou chave identificadora do valor específico dentro da variável</li>
+                <li><code>Conteúdo</code>: O valor propriamente dito dentro do elemento da variável</li>
+            </ul>
+            <blockquote cite="Gustavo Guanabara - 2019">"Um array é uma variável que tem vários elementos. Cada elemento é composto por seu valor e por uma chave de identificação." <strong>Guanabara, Gustavo - 2019</strong></blockquote>
+                <h3 class="exemplo">Exemplo</h3>
+                <pre class="codigo">
+<code>
+    let num = [5,8,4]
+    
+    //Aqui definimos uma variável de nome <em>num</em>,
+    com os valores <em>5, 8 e 4</em> armazenados nos
+    espaços <em>0, 1 e 2</em>, respectivamente
+</code>
+                </pre>
+                <h3>Não esqueça!</h3>
+                <p>Na linguagem de programação JavaScript, as ordens numeradas iniciam em <strong>0</strong>, e não em 1.</p>
+            <h2>Trabalhando os valores</h2>
+            <p>Podemos também adicionar valores novos dentro de um array já existente. E isso é feito de uma forma bem simples! Basta declararmos onde essa variável vai se encaixar.</p>
+            <p>Usando o exemplo anterior, podemos querer adicionar um novo elemento logo em seguida do 4, então declaramos que <code>num[3] = 6</code> e pronto, temos o novo valor 6 inserido no elemento 3.</p>
+            <p>Podemos ainda utilizar um método de nome <code>num.push(7)</code>. Dessa forma, é inserido o valor 7 dentro de um novo elemento, que terá o identificador gerado automaticamente no último espaço do array.</p>
+            <p>Podemos ainda descobrir quantos elementos temos no nosso vetor, e pra isso vamos utilizar o parâmetro <code>num.length</code>. Ainda nos apoiando no nosso exemplo, se pedirmos o length do array <code>num</code> feito acima, neste momento ele valeria 5. Pois temos os 3 valores declarados no início, junto com a declaração do array, o quarto valor foi adicionado uma declaração adicional, e o quinto valor foi adicionado com o método push!</p>
+            <p>Outro método muito importante também é o <code>num.sort()</code>, ele é o nosso organizador, vai colocar nosso conteúdo, nossos valores, em ordem crescente dentro dos elementos. Facilitando a localização.</p>
+                <h3 class="exemplo">Exemplo</h3>
+                <pre class="codigo">
+<code>
+    let num = [5,8,2,9,3]
+
+    num.sort()
+    num.push(1)
+    num[6] = 0
+    console.log(`Nosso vetor é ${num}`)
+    console.log(`O vetor tem ${num.length} posições`)
+    console.log(`o primeiro valor do vetor é ${num[0]}`)
+</code>
+                </pre>
+                <p>Se rodarmos esse exemplo, a saída que teremos vai ser:</p>
+                <pre class="codigo">
+<code>
+    Nosso vetor é 2,3,5,8,9,1,0
+    O vetor tem 7 posições
+    o primeiro valor do vetor é 2
+</code>
+                </pre>
+            <h2>Exibindo valores</h2>
+            <p>O exemplo que mostramos acima tem apenas 7 posições, e mesmo assim, se quiséssemos exibir um a um, precisaríamos escrever 7 comando <code>console.log(num[])</code>. Mas, como cada posição recebe um valor crescente, iniciando de 0, e em cada linha a única coisa que muda é o valor do código, podemos utilizar nossas velhas amigas, as <strong>Estruturas de Repetição!</strong></p>
+            <p>Continuando com o exemplo da página, vamos usar uma estrutura <code>for()</code> para representarmos todos os seus valores de forma bem simples.</p>
+                <h3 class="exemplo">Exemplo</h3>
+                <pre class="codigo">
+<code>
+    for(let pos = 0; pos &lt; num.length; pos){
+        console.log (num[pos])
+    }
+</code>
+                </pre>
+                <p>Dessa forma, vamos ter tantos valores na variável <code>pos</code> quanto valores na variável <code>num</code>, gerando exatamente as repetições necessárias para utilizar o código com todos os dados do array!</p>
+                <pre class="codigo">
+<code>
+    2
+    3
+    5
+    8
+    9
+    1
+    0
+</code>
+                </pre>
+                    <h3>Comando <code>"for in"</code></h3>
+                    <p>Existe ainda um comando em JavaScript que é feito especialmente para os nossos Arrays, que simplifica ainda mais a forma de utilização de todas as variáveis. O comando <code>for in</code> pode ser feito da seguinte maneira</p>
+                    <pre class="codigo">
+<code>
+    for(let pos in num){
+        console.log(num[pos])
+    }
+</code>
+                    </pre>
+                    <p>Isso é a mesma coisa que dizer que, "para(for) cada posição(pos) em(in) num". E isso retornaria para nós o mesmo resultado que o comando <code>for</code> tradicional!</p>
+                <h2>Procurando Valores</h2>
+                <p>E se quisermos procurar um valor dentro de um array gigante? Não dá pra ficar olhanto todos os valores e caçando!</p>
+                <p>pra isso, temos o método <code>num.indexOf()</code>. Ele vai procurar no nosso Array qual a chave que contém um determinado valor. No nosso exemplo de <code>var num = [2,3,5,8,9,0]</code>, se pedirmos <code>num.indexOf(8)</code>, ele vai nos retornar o resultado <code>3</code>, que seria a posição deste valor dentro da array. Da mesma forma, se pedirmos um valor que não existe na nossa variável, ele vai retornar como resultado <code>-1</code>, indicando que o valor desejado é inexistente.</p>
+</section>
+</body>
+</html>

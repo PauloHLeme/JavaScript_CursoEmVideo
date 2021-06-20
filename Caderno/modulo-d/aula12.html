@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo C - Aula 12</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <section>
+        <h1>Condições (Parte 2)</h1>
+            <h2>Condições Aninhadas</h2>               
+                <p>São condições que contém mais condições dentro dela, dando mais saídas além da situação binária que apenas uma condição permite</p>
+                <p>Nesse caso, se a <code>condição 1</code> for atendida, ele faz o comando do primeiro bloco, se falso, o segundo bloco contém outra condição <code>if</code>, para ser testada também como verdadeira ou falsa.</p>
+                <h3 class="exemplo">Estrutura</h3>
+                    <pre class="codigo">
+<code>
+    if (condição 1){
+        true
+    }else if (condição 2){
+        true
+    }else{
+        false
+    }
+</code>
+                    </pre>
+                <h3 class="exemplo">Exemplo</h3>
+                    <pre class="codigo">
+<code>
+    var idade
+    idade = 67
+    if (idade <16){
+    console.log('Não vota')
+    }else if(idade < 18 || idade >= 65){
+        console.log('Voto opcional')
+    }else{
+    console.log('Vota')
+    }
+</code>
+                    </pre>
+                    <p>Legal notar  nesse exemplo que apesar da idade para voto opcional ser entre 16 e 18 anos, não precisamos colocar a idade mínima pois, como declaramos no <code>if</code> inicial, APENAS as idades maiores que 16 passarão para o teste da segunda condição. Dessa forma, nunca haverá uma idade 15 ou 8 para ser testada, por exemplo, e podemos deixar nosso código mais enxuto!</p>
+            <h2>Condições Múltiplas</h2>
+                <p>Facilitam a escrita do código quando as condições a serem atendidas não compreendem intervalos, mas sim valores fixos a serem comparados. Dessa forma, podemos usar a expressão <code>switch</code> para tal.</p>
+                <h3 class="exemplo">Estrutura</h3>
+                    <pre class="codigo">
+<code>
+    switch(){
+        case a:
+        break
+        case b:
+        break
+        ...
+        default:
+        break
+    }
+</code>
+                    </pre>
+                <h3 class="exemplo">Exemplo</h3>
+                    <pre class="codigo">
+<code>
+    switch(semaforo){
+        case verde:
+            console.log('Siga')
+        break
+        case amarelo:
+            console.log('Atenção')
+        break
+        default:
+            console.log('Pare')
+        break
+    }
+</code>
+                    </pre>
+                    <p>Nesse exemplo, temos 3 saídas possíveis para um semáforo: Ou ele está verde, ou amarelo, ou vermelho. Como testamos a condição verde no case 1 e a amarela no case 2, só nos resta a vermelha, que foi colocada na default.</p>
+                <h3 class="exemplo">Coloque um freio no seu código! Ou vários!!!</h3>
+                    <p><strong>Atenção!</strong> O comando <code>switch</code> pede o uso do código <code>break</code> depois de cada <code>case</code> colocado. Isso acontece porque o switch vai analisar o resultado e pular para a execução direta do case adequado, mas não vai parar nele, e vai continuar executando tooooodos os cases que aparecerem depois. O uso do código break serve justamente para, depois da execução do case, parar todo o restante do processo do switch e ir para o restante do código.</p>
+
+
+                <h3 class="exemplo">Códigos Novos</h3>
+                    <ul>
+                        <li><code>new Date()</code></li>
+                        <p>Podemos usar ela na criação de uma variável, para atribuir propriedades de data e hora</p>
+                        <li><code>getHours()</code></li>
+                        <p>Utilizado em conjunto com o <code>new Date</code>, podemos capturar a hora do sistema que está rodando o código. Como exemplo, podemos ter uma variável <code>data</code> que receba o valor <code>new Date</code> e possa nos fornecer esses dados, enquanto em outra variável vamos chamar a hora com <code>data.getHours()</code> </p>
+                        <li><code>getDay()</code></li>
+                        <p>O getDay funciona de forma semelhante ao getHours, mas informando os dias da semana (domingo, segunda, etc). Vale notar, no entanto, que ele retorna o dia da semana em formato numérico, sendo 0 para domingo, 1 para segunda, e assim por diante, até o 6 para o sábado.</p>
+                    </ul>
+</section>
+</body>
+</html>

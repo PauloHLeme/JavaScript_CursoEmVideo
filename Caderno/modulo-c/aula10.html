@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo C - Aula 10</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body><section>
+    
+        <h1>Eventos DOM</h1>
+            <h2>O que são Eventos?</h2>
+                <p>Eventos são ações que podem ser executadas com o elemento, dependendo de determinado gatilho que o dispare, segundo aquilo que configurarmos.</p>
+            <h2>O que são Funções?</h2>
+                <p>Funções são conjuntos de códigos que serão executados quando o Evento ocorrer</p>
+                <p>Cada conjunto de código é chamado de <strong>bloco</strong>. Os blocos são delimitados entre <strong>chaves {}</strong>.</p>
+                <p>Nomeamos os blocos através da <code>funcion</code>, e colocamos o nome normalmente de acordo com a ação que vai acontecer, podendo ou não incluir parâmetros.</p>
+            <h2>Inserindo Eventos em um elemento</h2>
+                <p>Podemos colocar a chamada para o evento de duas maneiras: No código HTML, dentro da tag, ou no código do script</p>
+                <h3>No HTML</h3>
+                    <p>Para chamarmos o evento no código HTML, vamos dentro da tag desejada e  chamaremos o método desejado, junto do prefixo "on"</p>
+                    <h3 class="exemplo">Exemplo</h3>
+                        <p>Queremos criar uma interação com a nossa <code>div</code> quando clicarmos com o mouse nela. Para isso, faremos o seguinte:</p>
+                        <pre class="codigo">
+<code>
+    &lt;div id="area" onclick="clicar()"&gt;
+        Interaja...
+    &lt;/div&gt;
+    
+    //Nesse caso, o método é "click", então aplicamos o
+    prefixo "on" adicionando o "click" logo em seguida.
+    o "Clicar" é o nome da function que é declarada mais
+    abaixo, dentro do script
+
+    &lt;script&gt;
+        var area = window.document.querySelector('div#area')
+        function clicar(){
+            area.innerText = 'Clicou!'
+            area.style.background = 'red'
+        }
+    &lt;/script&gt;
+</code>
+                        </pre>
+                <h3>No Script</h3>
+                    <p>Para deixarmos o nosso HTML mais limpo, podemos criar <strong>listeners</strong>, que são elementos que analizam os disparos de eventos. Ao fazermos isso, utilizamos <code>addEventListener()</code> dentro do nosso script, da seguinte forma:</p>
+                        <h3 class="exemplo">Exemplo</h3>
+                            <pre class="codigo">
+<code>
+    &lt;div id="area"&gt;
+        Interaja...
+    &lt;/div&gt;
+
+    &lt;script&gt;
+        var area = window.document.querySelector('div#area')
+        area.addEventListener('click' clicar)
+        
+        //Aqui adicionamos o EventListener para a variável "area",
+        com o método "click". Note que nesse caso não utilizamos o
+        prefixo "on", que é necessário apenas dentro da tag HTML.
+
+        function clicar(){
+            area.innerText = 'Clicou!'
+            area.style.background = 'red'
+        }
+    &lt;/script&gt;
+</code>
+                            </pre>
+                            <p>Dessa forma, a nossa chamada está no JavaScript, deixando o foco do HTML para o que ele é feito, o conteúdo!</p>
+                            
+</section>
+</body>
+</html>

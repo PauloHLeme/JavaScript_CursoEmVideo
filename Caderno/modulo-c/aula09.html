@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo C - Aula 09</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body><section>
+    
+        <h1>O que é o DOM?</h1>
+            <p>DOM significa Document Object Model, ou seja, é um conjunto de objetos dentro do navegador que permitirão a execução do site.</p>
+            <h2>Árvore DOM</h2>
+                <p>O DOM pode ser estruturado como uma Árvore. </p>
+                <p>Vamos tomar por exemplo o seguinte código <strong>HTML</strong> criado no curso:</p>
+                <img src="../images/codigo-exemplo-a09.png" alt="codigo exemplo">
+                <p>Neste caso, teríamos a Árvore DOM organizada da seguinte forma:</p>
+                <img src="../images/dom-site-exemplo-a09.png" alt="DOM de exemplo">
+                <p>Perceba também que existe uma hierarquia de objetos em cada elemento da árvore. Podemos definir como:</p>
+                <ul>
+                    <li>Root</li>
+                    <p>A raiz do DOM. A raiz sempre vai ser o elemento <code>window</code>, que se refere a janela do navegador onde o site está exibido.</p>
+                    <li>Parent</li>
+                    <p>É o objeto que está logo acima do objeto onde estamos trabalhando. Na imagem acima, por exemplo, o parent do elemento <code>HTML</code> é o elemento <code>document</code>.</p>
+                    <li>child</li>
+                    <p>É o objeto ou objetos que estão logo abaixo do objeto onde estamos trabalhando. Ainda com o <code>HTML</code> como exemplo, temos dois childs dele, o <code>head</code> e o <code>body</code>.</p>
+                </ul>
+            <h2>Selecionando elementos DOM</h2>
+            <p>Podemos selecionar os elementos DOM do nosso documento de diversas maneiras:</p>
+                <ul>
+                    <li>Por Marca: <code>getElementsByTagName()</code></li>                    
+                    <p>Selecionar por Marca é útil quando queremos utilizar todos os elementos do mesmo tipo, como por exemplo, criar uma característica para todas as tags <code>link</code>.</p>
+                    <h3 class="exemplo">Exemplo</h3>
+                    <pre class="codigo">
+<code>
+    var p1 = window.document.getElementsByTagName('p')
+    //se fizermos assim, pedimos para a variável p1
+    receber o valor de todas as tags p do documento
+
+    var p1 = window.document.getElementsByTagName('p')[0]
+    //especificando um número dentro dos colchetes, pedimos
+    para selecionar uma única tag, correspondente ao número,
+    onde a primeira tag do documento será a 0, a segunda a 1,
+    e assim sucessivamente.
+</code>
+                    </pre>
+                    <li>Por ID: <code>getElementById()</code></li>
+                    <li>Por Nome: <code>getElementsByName()</code></li>
+                    <li>Por Classe: <code>getElementsByClassName()</code></li>
+                    <li>Por Seletor: <code>querySelector()</code> ou <code>querySelectorAll()</code></li>
+                </ul>
+                <p>Utilizamos a seleção de um elemento para podermos chamar o script especificamente para ele.</p>
+                <p><strong>Atenção!</strong> Atualmente, o mais recomendado é utilizar a seleção por Seletor.</p>
+                    <h3 class="exemplo">Comandos novos</h3>
+                    <ul>
+                        <li><code>innerText</code>:</li>
+                        <p>Pega o texto interno de um elemento, ex: <code>p1.innerText</code></p>
+                        <li><code>innerHTML</code>:</li>
+                        <p>Pega o texto e a formatação HTML interna. Ex: <code>p1.innerHTML</code></p>
+                    </ul>
+</section>
+</body>
+</html>

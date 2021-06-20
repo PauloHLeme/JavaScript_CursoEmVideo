@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo B - Aula 07</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <section>
+        <h1>Operadores (parte 1)</h1>
+            <p>O JavaScript trabalha com uma vasta gama de operadores. Neste curso, vamos nos focar nos seguintes:</p>
+            <ul>
+                <li>aritméticos</li>
+                <li>atribuição</li>
+                <li>relacionais</li>
+                <li>lógicos</li>
+                <li>ternário</li>
+            </ul>
+            <p>Nessa primeira aula, vamos conhecer os Operadores Aritméticos e de Atribuição</p>
+            <h2>Aritméticos</h2>
+                <p>Os operadores aritméticos são os operadores matemáticos, utilizado para fazer cálculos</p>
+                <pre class="codigo">
+<code>
+    5 + 2 == 7       // + é operador de soma
+    5 - 2 == 3       // - é operador de subtração
+    5 * 2 == 10      // * é operador de multiplicação
+    5 / 2 == 2,5     // / é operador de divisão
+    5 % 2 == 1       // % é operador de resto de divisão
+    5 ** 2 ==  25    // ** é operador de potência       
+</code>
+                </pre>
+                <h3>Não esqueça! - Ordem de precedência</h3>
+                <p>Da mesma forma que na matemática existe hierarquia nos cálculos realizados (primeiro potência e raiz, depois multiplicação e divisão e por último adição e subtração), também acontece com os Operadores Aritméticos</p>
+                <ol>
+                    <li>Parênteses <code>()</code></li>
+                    <li>Potências <code>**</code></li>
+                    <li>Multiplicação, divisão e resto de divisão <code>* / %</code></li>
+                    <li>Soma e subtração <code>+ -</code></li>
+                </ol>
+            <h2>Auto-atribuições</h2>
+                <p>As variáveis também podem gerar atribuições para elas mesmas, utilizando fórmulas lógicas, como por exemplo:</p>
+                <pre class="codigo">
+<code>
+    var n = 3       //atribuimos o valor 3 para n
+    n = n + 4       //como n era igual a 3, agora passa a valer 7
+    n = n - 5       //2
+    n = n * 4       //8
+    n = n / 2       //4
+    n = n ** 2      //16
+    n = n % 5       //ao final de todas as operações, n vale 1
+</code>
+                </pre>
+                <p>Podemos ainda simplificar o código, pois se a variável está recebendo uma atribuição dela mesmo, podemos fazer o seguinte:</p>
+                <pre class="codigo">
+<code>
+    var n = 3       //atribuimos o valor 3 para n
+    n = n + 4       simplificando       n += 4
+    n = n - 5       simplificando       n -= 5
+    n = n * 4       simplificando       n *= 4
+    n = n / 2       simplificando       n /= 2
+    n = n ** 2      simplificando       n **= 2
+    n = n % 5       simplificando       n %= 5
+</code>
+                </pre>
+                <p>A grande maioria das linguagens atuais aceitam essa forma de simplificação! Olha que aprendizado valioso!</p>
+            <h2>Incremento</h2>
+                <p>Podemos também querer fazer incrementos consecutivos de um valor, e para isso temos o Operador de Incremento</p>
+                <h3 class="exemplo">exemplo</h3>
+                    <pre class="codigo">
+<code>
+    var x = 5       //Atribuímos o valor de x como 5
+    x = x + 1       //Incrementamos mais 1 a x, fazendo ele valer 6
+    x = x + 1       //com o novo Incremento, agora ele vale 7
+    x = x - 1       //com a subtração, temos ele valendo novamente 6
+</code>
+                    </pre>
+                    <p>E também podemos simplificar o código, usando <code>x++</code> ou <code>x--</code>, simples assim!</p>
+                
+</section>
+</body>
+</html>

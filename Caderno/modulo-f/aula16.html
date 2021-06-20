@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo F - Aula 17</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <section>
+        <h1>Próximos passos</h1>
+            <h2>Daqui pra frente</h2>
+                <p>Não é porque o nosso curso chegou ao fim que o nosso aprendizado em JavaScript também chegou! Muuuuito pelo contrário. Aprendemos a base, a estrutura, os conceitos principais da linguagem, mas ela tem muito pra oferecer ainda e que não cabe aqui nesse curso básico de introdução à linguagem.</p>
+                <p>A seguir, temos algumas dicas que vão nos levar mais além!</p>
+                <ul>
+                    <li>Estude HTML e CSS:</li>
+                    <p>No canal do Curso em Vídeo temos a playlist de HTML + CSS antiga, mas que continua super atualizada, e temos também a atualização do curso, com conteúdo ainda mais completo. O HTML e as CSS andam lado a lado com o JavaScript, e vale muito a pena aprender a desenvolver com eles.</p>
+                    <li>Continue estudando as <code>funções</code>:</li>
+                    <p>No curso, aprendemos o básico de funções, mas elas entregam muito mais pra gente. Procure aprender mais sobre elas, sobre callbacks, iife, tem muito conteúdo!</p>
+                    <li>Objetos:</li>
+                    <p>Alem de ser uma linguagem funcional, o JavaScript é Orientado a Objetos. Aprender o conceito e a forma de aplicar é bem útil.</p>
+                    <li>Modularização:</li>
+                    <p>Podemos criar módulos com o JS, ou seja, arquivos separados, com pedaços de código separados, para funções específicas, e utilizar eles dentro do nosso código principal.</p>
+                    <li>RegEx:</li>
+                    <p>RegEx são expressões regulares. São excelentes para validação de dados, e economizam tempo e código.</p>
+                    <li>JSON:</li>
+                    <p>Uma estrutura de objetos capaz de carregar, transmitir e salvar dados</p>
+                    <li>AJAX:</li>
+                    <p>Alguns recursos gráficos bem interessantes utilizados por Google, Facebook e grandes empresas</p>
+                    <li>NodeJS:</li>
+                    <p>Para rodar o JavaScript no servidor e aumentar ainda mais o potencial da linguagem!</p>
+                </ul>
+            <h2>Introdução a Objetos</h2>
+                <p>O Array no JavaScript é heterogêneo, ou seja, aceita valores de diferentes tipos em cada um de seus elementos. Mas, como já vimos, os elementos são nomeados com números, e as vezes isso torna complicado o uso para aplicações mais avançadas.</p>
+                <p>Nesse caso, os objetos tornam o nosso serviço bem mais fácil, pois permitem também, entre outras funcionalidades, a nomeação de cada elemento e também a alocação de funções nos espaços reservados para valores!</p>
+                    <h3 class="exemplo">Exemplo</h3>
+                    <pre class="codigo">
+<code>
+    let amigo = {
+        nome:'José',
+        sexo: 'M',
+        peso:85.4,
+        engordar(p){
+            console.log('Engordou')
+            this.peso+= p
+        }
+    }
+    
+    amigo.engordar(2)
+    console.log(`${amigo.nome} pesa ${amigo.peso}Kg`)
+</code>
+                    </pre>
+    </section>
+</body>
+
+</html>

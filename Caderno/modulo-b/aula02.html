@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo B - Aula 02</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <section>
+        <h1>Tratamento de Dados</h1>
+            <p>OBS:Nesta aula, vamos tratar mais especificamente sobre as variáveis do tipo <code>number</code> e <code>string</code></p>
+            <p>Ao utilizar uma variável e guardar os dados, estamos com eles armazenados, mas ainda não fizemos nada com o essas informações. Podemos por exemplo pedir o Nome, Sobrenome, endereço e telefone de uma pessoa e exibir na tela por diversos motivos.</p>
+            <p>Para isso, não basta sabermos exibir o prompt pedindo a informação e criar a variável para armazená-la. Devemos saber <strong>Tratar os Dados</strong>.</p>
+            <p>Vamos usar como exemplo um site que peça, logo que você entra nele, o seu nome, para que ele possa saber como se referir ao falar com você!</p>
+            <p>Neste caso, temos que pedir o nome, através de um <code>window.prompt</code>, e também temos que criar uma variável que armazene essa informação. Da seguinte forma:</p>
+            <pre class="codigo">
+                <code>
+    var = 'nome'
+    nome = window.prompt('Qual o seu nome?')
+                </code>
+            </pre>
+            <p>Em seguida, o site vai criar uma caixa de mensagem dando as boas vindas ao usuário, utilizando o nome dele. Nessa parte, temos um novo desafio, apresentar o texto padrão e acrescentar o nome do usuário, que será diferente para cada pessoa que acessar, mas que sempre estará armazenado em um mesmo lugar, na variável <code>nome</code></p>.
+            <p>Para isso, faremos da seguinte forma:</p>
+            <pre class="codigo">
+                <code>
+    var = 'nome'
+    nome = window.prompt('Qual o seu nome')
+    window.alert('É um grande prazer te conhecer, '
+    + nome)
+                </code>
+            </pre>
+            <p>Observem que nesse caso, tudo o que está dentro de '' é o texto padrão, estático, exibido pelo alerta, seguido pelo sinal de +, que em JavaScript é uma <strong>Concatenação</strong>, e por fim, fora das aspas, digitamos o nome da variável, nesse caso, <code>nome</code>.</p>
+            <p>Dessa forma, se o usuário digitou seu nome <strong>Paulo</strong>, a caixa de alerta retornará a mensagem "É um grande prazer te conhecer, Paulo"</p>
+            <h2>Transformar String em Número</h2>
+                <p>Quando temos uma entrada de um prompt, recebemos a variável como uma <code>string</code>, mas há casos onde precisamos de números, para realizar cálculos. E agora? Como fazemos?</p>
+                <p>Para isso, existem os conversores de variáveis, como por exemplo o <code>Number.parseInt(n)</code> e o <code>Number.parseFloat(n)</code>, que transformam um número que entrou como string em um número inteiro ou real, respectivamente.</p>
+                    <h3 class="exemplo">Exemplo</h3>
+                    <pre class="codigo">
+                        <code>
+    var n1 = Number.parseInt(window.prompt('Digite 
+    um número:'))
+    var n2 = Number.parseInt(window.prompt('Digite 
+    outro número:'))
+    var soma = n1 + n2
+    window.alert('A soma dos valores é: ' + soma)
+                        </code>
+                    </pre>
+                    <p>Podemos também utilizar apenas a string <code>Number</code>. Nesse caso, o código irá definir se o valor é inteiro ou real.</p>
+            <h2>Transformar Número em String</h2>
+            <p>Funciona como a situação anterior, mas com o código <code>String(n)</code> ou <code>n.toString()</code>.</p>
+            <h2>Formatando Strings</h2>
+                <p>Em versões anteriores tínhamos que ficar fazendo concatenações em série para declarar várias variáveis dentro de uma simples frase.</p>
+                <p>Nas versões atuais, ao utilizarmos a crase para escrever o texto que será exibido, podemos fazer o que é chamado de <em>template string</em>, que utiliza <em>placeholders</em> <code>${n}</code> para exibir a variável dentro do texto, substituindo o uso de várias concatenações.</p>
+                    <h3 class="exemplo">Concatenando</h3>
+                    <pre class="codigo">
+                        <code>
+    var n1 = Number(window.prompt('Digite um número:'))
+    var n2 = Number(window.prompt('Digite outro número:'))
+    var soma = n1 + n2
+    window.alert('A soma entre ' + n1 ' e ' + n2 
+    ' é igual a ' + soma)
+                        </code>
+                    </pre>
+                    <h3 class="exemplo">Template String</h3>
+                    <pre class="codigo">
+                        <code>
+    var n1 = Number(window.prompt('Digite um número:'))
+    var n2 = Number(window.prompt('Digite outro número:'))
+    var soma = n1 + n2
+    window.alert(`A soma entre ${n1} e ${n2} é igual 
+    a ${soma}`)
+                        </code>
+                    </pre>
+                <p>Viu? Muito mais enxuto!</p>
+            <h3 class="exemplo">O que mais podemos fazer</h3>
+            <pre class="codigo">
+                <code>
+    s.length            //quantos caracteres a string tem
+    s.toUperCase()      //transformar em maiúsculas
+    s.toLowerCase()     //transformar em minúsculas
+    s.toFixed(2)        //coloca 2 casas decimais em number
+    s.replace('.',',')  //usar vírgula na casa decimal
+                </code>
+            </pre>
+            <h3 class="exemplo">Bônus</h3>
+                <p class="codigo"><code>n1.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'})</code></p>
+                Esse código vai localizar o conteúdo em português do Brasil, e dizer que o estilo vai ser do dinheiro brasileiro, em Reais
+    </section>
+</body>
+</html>

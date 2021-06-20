@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo B - Aula 08</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <section>
+        <h1>Operadores (parte 2)</h1>
+            <p>Nessa aula, vamos ver os operadores <code>Relacionais, lógicos e ternários</code>.</p>
+            <h2>Operadores Relacionais</h2>
+                <p>Os operadores relacionais os que estabelecem relações, como maior, menor, igual, etc...</p>
+                <p>Ao utilizarmos Operadores Relacionais, recebemos em retonrno um resultado Booleano, ou seja, <code>True or False</code> (verdadeiro ou falso)</p>
+                <pre class="codigo">
+<code>
+    5 > 2   True        //maior que
+    7 < 4   False       //menor que
+    8 >= 8  True        //maior ou igual que
+    9 <= 7  False       //menor ou igual que
+    5 == 5  True        //Igual a
+    4 != 4  False       //diferente de
+</code>
+                </pre>
+                    <h3 class="exemplo">Dica!</h3>
+                    <p>Se uma expressão contiver operadores Relacionais e Operadores Aritméticos, os Aritméticos tem <strong>precedência</strong> para serem executados!</p>
+            <h2>Operadores de Identidade</h2>
+                <p>Os Operadores Relacionais comparam valores, e não tipos de variáveis, portanto, se tivermos a <code>var n1 = 5</code> e a <code>var n2 = '5'</code> e pedirmos para verificar se <code>n1 == n2</code> o retorno será <code>true</code>, mesmo que um seja do tipo <code>Number</code> e outro do tipo <code>String</code>.</p>
+                <p>para verificarmos não só o valor, mas também o tipo, utilizamos os <strong>operadores de Identidade</strong>.</p>
+                    <h3 class="exemplo">Exemplo</h3>
+                    <pre class="codigo">
+<code>
+    5 === 5     true    //igual irrestrito
+    5 === '5'   false
+    5 !== '5'   true    //diferente irrestrito
+</code>
+                    </pre>
+            <h2>Operadores Lógicos</h2>
+                    <p>Os operadores lógicos servem para, como o próprio nome diz, escrevermos expressões lógicas, e são eles:</p>
+                    <ul>
+                        <li><code>!</code> Negação (NÃO lógico)</li>
+                        <li><code>&&</code> Conjunção (E lógico)</li>
+                        <li><code>||</code> Disjunção (OU lógico)</li>
+                    </ul>
+                        <h3 class="exemplo">Operações Lógicas</h3>
+                        <pre class="codigo">
+<code>
+    Negação             Resultado
+    !true               false
+    !false              True
+
+
+    Conjunção           Resultado
+    true && true        True
+    true && false       false
+    false && true       false
+    false && false      false
+
+
+    Disjunção           Resultado
+    true || true        True
+    true || false       True
+    false || true       True
+    false || false      false
+</code>
+                        </pre>
+                        <h3>Ordem de precedência</h3>
+                        <h4>Operadores</h4>
+                        <ol>
+                            <li>Operadores Aritméticos</li>
+                            <li>Operadores Relacionais</li>
+                            <li>Operadores Lógicos</li>
+                        </ol>
+                        <h4>Lógicos</h4>
+                        <ol>
+                            <li>Não</li>
+                            <li>E</li>
+                            <li>Ou</li>
+                        </ol>
+            <h2>Operadores ternários</h2>
+                <p>Os operadores ternários tem três partes, e utilizam os operadores <code>?</code> e <code>:</code> juntos para determinar saídas para uma expressão, seja ela verdadeira ou falsa.</p>
+                <h3>Definindo, temos:</h3>
+                    <pre>           <code>teste ? true : false</code></pre>
+                <h3 class="exemplo">Exemplo</h3>
+                <pre class="codigo">
+<code>
+    var idade = 21
+
+        //Define a idade como 21 anos
+
+    idade >=18 ? 'MAIOR' : 'MENOR'
+
+        //Testa se a variável idade é maior ou igual a 18
+        anos. Caso "true", ocorre o que vem após o "?",
+        caso "false", ocorreo que vem depois do ":"
+
+        //Neste exemplo, o resultado seria "MAIOR"
+</code>
+                </pre>
+</section>
+</body>
+</html>
